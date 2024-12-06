@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Search Results</h2>
+<table>
+    <thead>
+        <tr>
+            <th>HSHD_NUM</th>
+            <th>BASKET_NUM</th>
+            <th>PURCHASE_</th>
+            <th>PRODUCT_NUM</th>
+            <th>DEPARTMENT</th>
+            <th>COMMODITY</th>
+            <th>SPEND</th>
+            <th>UNITS</th>
+            <th>STORE_R</th>
+            <th>WEEK_NUM</th>
+            <th>YEAR</th>
+            <th>L</th>
+            <th>AGE_RANGE</th>
+            <th>MARITAL</th>
+            <th>INCOME_RANGE</th>
+            <th>HOMEOWNER</th>
+            <th>HSHD_COMPOSITION</th>
+            <th>HH_SIZE</th>
+            <th>CHILDREN</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.HSHD_NUM }}</td>
+            <td>{{ row.BASKET_NUM }}</td>
+            <td>{{ row.PURCHASE_ }}</td>
+            <td>{{ row.PRODUCT_NUM }}</td>
+            <td>{{ row.DEPARTMENT }}</td>
+            <td>{{ row.COMMODITY }}</td>
+            <td>{{ row.SPEND }}</td>
+            <td>{{ row.UNITS }}</td>
+            <td>{{ row.STORE_R }}</td>
+            <td>{{ row.WEEK_NUM }}</td>
+            <td>{{ row.YEAR }}</td>
+            <td>{{ row.L }}</td>
+            <td>{{ row.AGE_RANGE }}</td>
+            <td>{{ row.MARITAL }}</td>
+            <td>{{ row.INCOME_RANGE }}</td>
+            <td>{{ row.HOMEOWNER }}</td>
+            <td>{{ row.HSHD_COMPOSITION }}</td>
+            <td>{{ row.HH_SIZE }}</td>
+            <td>{{ row.CHILDREN }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
