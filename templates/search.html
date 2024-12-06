@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Search for Household Data</h2>
+<form action="/search" method="POST">
+    <label for="hshd_num">Enter HSHD_NUM:</label>
+    <input type="text" id="hshd_num" name="hshd_num" required><br>
+    <button type="submit">Search</button>
+</form>
+{% endblock %}
